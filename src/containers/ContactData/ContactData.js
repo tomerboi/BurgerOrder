@@ -68,7 +68,7 @@ class ContactData extends Component {
         return (
             <Aux>
                 <Modal show={this.state.show} clicked={this.OrderClickHandler}>
-
+                    j
                 </Modal>
                 <div className={classes.ContactData}>
                     <h4>Enter your Contact Data</h4>
