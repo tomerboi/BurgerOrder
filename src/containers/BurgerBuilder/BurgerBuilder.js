@@ -97,22 +97,22 @@ class BurgerBuilder extends Component {
                 }
             }
         }
-     //   axios.post('/orders.json', order)
-       //     .then(response => {
-      //          console.log(response);
-      //          this.setState({ loading: false, didCheckout: false })
-      //      })
-      //      .catch(error => {
-      //          console.log(error);
-      //          this.setState({ loading: false, didCheckout: false })
-      //      });
+        //   axios.post('/orders.json', order)
+        //     .then(response => {
+        //          console.log(response);
+        //          this.setState({ loading: false, didCheckout: false })
+        //      })
+        //      .catch(error => {
+        //          console.log(error);
+        //          this.setState({ loading: false, didCheckout: false })
+        //      });
         const queryParams = [];
-        for(let i in this.state.burger){
+        for (let i in this.state.burger) {
             queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.burger[i]));
         }
-        const price = "&price=" + this.state.price; 
+        const price = "&price=" + this.state.price;
         const queryString = queryParams.join('&') + price;
-        this.props.history.push({pathname : "/checkout", search : '?' + queryString});
+        this.props.history.push({ pathname: "/checkout", search: '?' + queryString });
     }
 
     getCurrentPrice(price, func) {
@@ -120,7 +120,6 @@ class BurgerBuilder extends Component {
     }
 
     render() {
-        console.log("rendered")
         var diabledInfo = {
             ...this.state.burger
         }
